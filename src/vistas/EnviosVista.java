@@ -28,7 +28,7 @@ public class EnviosVista extends JFrame {
     private JPanel pnlEditarEnvio;
 
     private JTextField txtCodigo, txtCliente, txtPeso, txtDistancia;
-    private JComboBox cmbTipoEnvio;
+    private JComboBox<TipoEnvio> cmbTipoEnvio;
 
     private JButton btnAgregarEnvio, btnRetirarEnvio, btnGuardarEnvio;
 
@@ -72,9 +72,9 @@ public class EnviosVista extends JFrame {
         lblTipo.setBounds(220, 10, 100, 25);
         pnlEditarEnvio.add(lblTipo);
 
-        cmbTipoEnvio = new JComboBox();
+       cmbTipoEnvio = new JComboBox<>();
         cmbTipoEnvio.setBounds(320, 10, 100, 25);
-        DefaultComboBoxModel mdlTipoEnvio = new DefaultComboBoxModel(TipoEnvio.values());
+        DefaultComboBoxModel<TipoEnvio> mdlTipoEnvio = new DefaultComboBoxModel<>(TipoEnvio.values());
         cmbTipoEnvio.setModel(mdlTipoEnvio);
         pnlEditarEnvio.add(cmbTipoEnvio);
 
